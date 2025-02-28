@@ -1,9 +1,10 @@
-# mu_serdes
+# mu_wire
 Convert between internal and external representation of objects via
 serialization and deserialization.  Provides APIs for C and Python.
 
 Provides efficient coding of several immediate types (unsigned 7-bit ints, true,
 false, NULL),
+
 ## supported types
 
 In the serialized form, each supported type can be identified by the first byte
@@ -12,9 +13,8 @@ in the byte stream, and each object has a defined length.
 In the table below, `<ali>` represents an Arbitrary Length Integer -- see below
 for more information.
 
-+---+---+---+---+---+---+
 | header | serialized form |c type| python type | range | comment |
-+---+---+---+---+---+---+
+|---|---|---|---|---|---|
 | 0xxxxxxx | immediate | uint8 | int | 0..127 | immediate unsigned int |
 | 10000000 | immediate | NULL | None | immediate |  |
 | 10000001 | immediate | true | True | immediate |  |
