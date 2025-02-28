@@ -1,2 +1,2 @@
-# mu_intex
-Convert between INTernal and EXternal representation of objects (i.e. serialize and deserialize)
+# mu_serdes
+Convert between internal and external representation of objects via serialization and deserialization.
